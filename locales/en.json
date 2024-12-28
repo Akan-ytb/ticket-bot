@@ -1,0 +1,134 @@
+{
+	"commands": {
+		"ticket_manage": {
+			"no_specify": "Please specify a sub-command.",
+			"sub_commands": {
+				"setup": {
+					"already_exists": "Un panneau de tickets avec cet ID `{custom_id}` existe déjà.",
+					"created": "Configuration réussie du panneau de tickets.\n\n{panel_info}"
+				},
+				"delete": {
+					"not_exists": "Un panneau de tickets avec cet ID `{custom_id}` n'existe pas.",
+					"deleted": "Ticket panel supprimé."
+				},
+				"list": {
+					"no_panels": "Il n'y a pas de configuration de panneaux de tickets.",
+					"description": "**Voici la liste de tous les panneaux :**",
+					"footer": "Actuellement sur la page {page} de {pages}."
+				},
+				"send": {
+					"no_panels": "Il n'y a pas de configuration de panneaux de tickets.",
+					"send_success": "Le panneau de tickets a été envoyé avec succès !",
+					"embed_config": {
+						"separator": "{counter}: {name} - {emoji}",
+						"title": "Système de tickets | Permer de créer un ticket",
+						"description": "En cliquant sur une des catégories de boutons correspondantes sur ce message, vous créerez un ticket avec un accès direct et privé au staff.\n\n__**Support Categories**__\n{separator}\n\n__**Ticket Information**__\n`•` Before creating a ticket read the proper **FAQ** Channels.\n`•` Abuse of the Système de tickets will lead to **punishment(s)**",
+						"footer": "Veuillez utiliser les boutons ci-dessous pour créer un ticket.",
+						"color": "AQUA"
+					}
+				}
+			}
+		},
+		"add": {
+			"success": "L'utilisateur {user_mention} a été ajouté au ticket.",
+			"user_already_in_ticket": "{user_mention} figure déjà dans ce ticket."
+		},
+		"remove": {
+			"user_removed": "L'utilisateur {user_mention} a été supprimé du ticket.",
+			"user_not_in_ticket": "{user_mention} ne figure pas dans ce ticket."
+		},
+		"close": {
+			"closed_by": "{user_mention} a fermé le ticket."
+		},
+		"open": {
+			"opened_by": "{user_mention} a ouvert le ticket."
+		},
+		"rename": {
+			"success": "{user_mention} a renommé le ticket en {new_name}."
+		},
+		"alert": {
+			"user_message": "Bonjour {user_mention}, vous avez un [ticket]({link}) ouvert et un membre du personnel a besoin que vous y répondiez immédiatement\n\n**Informations sur le ticket**\n » Nom du ticket : {channel_name}\n » Ticket Depuis : {openSince}\n » Lien du ticket : {direct_link}",
+			"staff_message": "Je viens d'envoyer un message à l'utilisateur, veuillez attendre qu'il réponde"
+		},
+		"claim": {
+			"already_claimed": "Ce ticket a déjà été réclamé par {user_mention}.",
+			"claimed": "Ce ticket est désormais réclamé par {user_mention}."
+		},
+		"giveto": {
+			"ticket_not_claimed": "Ce ticket n'est pas réclamé.",
+			"ticket_not_claimed_by_you": "Ce ticket n'est pas réclamé par vous.",
+			"ticket_given_to": "{author_mention} a donné le ticket à {user_mention}."
+		}
+	},
+	"embeds": {
+		"message_ticket": {
+			"creating": "Création du ticket...",
+			"created": "Ticket créer, le voici {channel_mention}!",
+			"title": "Ticket créer | {panel_name} #{ticket_number}",
+			"description": "Salut {member_username}, notre équipe vous répondra dans les plus brefs délais.\nEn attendant, veuillez décrire votre problème ici de manière aussi détaillée que possible.\n\n**Panneau de tickets :** {panel_name}\n**Propriétaire du ticket :** {member_mention}\n**Date du ticket:** {ticket_date}",
+			"color": "AQUA"
+		}
+	},
+	"buttons": {
+		"close": {
+			"text": "Fermer",
+			"emoji": "🔒",
+			"style": "SECONDARY",
+			"messages": {
+				"closed_ticket": "{user_mention} a fermé le ticket.",
+				"closed_ticket_staff": "```Contrôles des tickets de l’équipe d’assistance```"
+			}
+		},
+		"claim": {
+			"text": "Claim",
+			"emoji": "👋",
+			"style": "SECONDARY",
+			"messages": {
+				"claimed_ticket": "{user_mention} a réclamé le ticket."
+			}
+		},
+		"transcript": {
+			"text": "Transcript",
+			"emoji": "📑",
+			"style": "SECONDARY",
+			"messages": {
+				"saving_transcript": "Sauvegarde du transcript...",
+				"transcript_saved": "Transcript sauvegarder avec succès!"
+			}
+		},
+		"open": {
+			"text": "Ouvrir",
+			"emoji": "🔓",
+			"style": "SECONDARY",
+			"messages" : {
+				"ticket_opened": "{user_mention} a ouvert le ticket."
+			}
+		},
+		"delete": {
+			"text": "Supprimer",
+			"emoji": "⛔",
+			"style": "SECONDARY",
+			"messages": {
+				"deleting_ticket": "Ce ticket sera supprimé dans {time} secondes."
+			}
+		}
+	},
+	"system": {
+		"bot_ready": "Bot allumé",
+		"mongo_connected": "MongoDB connecté"
+	},
+	"errors": {
+		"bad_mongo_uri": "MONGO_URI is not set in config.json",
+		"command_not_found": "The {command} command was not found",
+		"server_without_tickets": "This server no have data for the Système de tickets.\nPlease create a ticket panel using the command `ticket-manage setup`",
+		"reached_max_tickets": "You have reached the maximum amount of tickets opened at the same time.",
+		"channel_without_ticket": "This channel is not a ticket channel.",
+		"ticket_already_closed": "This ticket is already closed.",
+		"ticket_already_claimed": "This ticket is already claimed by someone else.",
+		"transcript_channel_not_found": "The transcript channel was not found.",
+		"ticket_already_open": "This ticket is already open.",
+		"ticket_not_closed": "This ticket is not closed.",
+		"no_staff_role": "This server has no set up a staff role.\nPlease use `config` command to setup the staff role.",
+		"no_permission": "You don't have permission to use this command."
+	}
+}

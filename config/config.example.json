@@ -1,0 +1,6 @@
+{
+    "TOKEN": "TOKEN_HERE",
+    "GUILD-ID": "SERVER_ID",
+    "MONGO_URI": "MONGO_URI_HERE",
+    "LANGUAGE": "en"
+}
