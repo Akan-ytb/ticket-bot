@@ -29,7 +29,7 @@ Assurez-vous d'avoir NodeJS v16+ installé. N'oubliez pas de renommer le fichier
 
 sh
 Copier le code
-git clone https://github.com/akanytb/ticket-bot.git
+git clone https://github.com/Akan-ytb/ticket-bot.git
 cd ticket-bot
 npm install
 npm start
